@@ -22,7 +22,7 @@ def build_feed ():
 	items = []
 	for dir in dirs:
 		items.append(PyRSS2Gen.RSSItem(
-				title = 'File added',
+				title = dir.split('/')[-1],
 				link = 'http://whatever/',
 				description = 'This file is now available: %s' % dir.path,
 				pubDate = dir.date_added
